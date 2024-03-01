@@ -186,6 +186,28 @@ public class GamePanel extends JPanel implements ActionListener{
                         direction = 'D';
                     }
                     break;
+                case KeyEvent.VK_SPACE:
+                    if (running == false) {
+
+                        startGame();
+                        
+                    }
+                    break;
+                case KeyEvent.VK_ESCAPE:
+                    System.exit(0);
+                    break;
+                case KeyEvent.VK_Q:
+                    System.exit(0);
+                    break;
+                case KeyEvent.VK_P:
+                    if (running == true) {
+                        running = false;
+                        timer.stop();
+                    } else {
+                        running = true;
+                        timer.start();
+                    }
+                    break;
             }
         }
     }
